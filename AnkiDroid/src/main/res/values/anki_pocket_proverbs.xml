@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Keep the Japanese and English arrays in the same order. -->
+    <string-array name="anki_pocket_proverbs_japanese">
+        <item>七転び八起き</item>
+        <item>継続は力なり</item>
+        <item>急がば回れ</item>
+        <item>石の上にも三年</item>
+        <item>猿も木から落ちる</item>
+        <item>雨降って地固まる</item>
+        <item>花より団子</item>
+        <item>塵も積もれば山となる</item>
+        <item>千里の道も一歩から</item>
+        <item>案ずるより産むが易し</item>
+        <item>失敗は成功のもと</item>
+        <item>笑う門には福来る</item>
+    </string-array>
+    <string-array name="anki_pocket_proverbs_english">
+        <item>Fall seven times, stand up eight.</item>
+        <item>Persistence becomes strength.</item>
+        <item>When in a hurry, take the longer route.</item>
+        <item>Even a stone grows warm after three years.</item>
+        <item>Even monkeys fall from trees.</item>
+        <item>After rain, the ground hardens.</item>
+        <item>Better food than flowers.</item>
+        <item>Even dust, when piled up, becomes a mountain.</item>
+        <item>A journey of a thousand miles begins with one step.</item>
+        <item>Doing it is easier than worrying about it.</item>
+        <item>Failure is the foundation of success.</item>
+        <item>Good fortune comes to the house that laughs.</item>
+    </string-array>
+</resources>
