@@ -536,6 +536,16 @@ open class DeckPicker :
         }
 
         setViewBinding(binding)
+
+        // Anki Pocket: one proverb per day, with Japanese first and its translation below.
+        val pocketJapaneseProverbs = resources.getStringArray(R.array.anki_pocket_proverbs_japanese)
+        val pocketEnglishProverbs = resources.getStringArray(R.array.anki_pocket_proverbs_english)
+        if (pocketJapaneseProverbs.isNotEmpty() && pocketJapaneseProverbs.size == pocketEnglishProverbs.size) {
+            val dayNumber = java.time.LocalDate.now().toEpochDay()
+            val proverbIndex = Math.floorMod(dayNumber, pocketJapaneseProverbs.size.toLong()).toInt()
+            findViewById<TextView>(R.id.anki_pocket_proverb_japanese)?.text = pocketJapaneseProverbs[proverbIndex]
+            findViewById<TextView>(R.id.anki_pocket_proverb_english)?.text = pocketEnglishProverbs[proverbIndex]
+        }
         if (!fragmented) {
             // On recreation into this single-pane layout (e.g. a foldable changing form
             // factor), saved state can still hold the split-pane's side panel fragment.
