@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Anki Pocket visual foundation.
+  Restrained ink, blue-violet surfaces, and a small vermilion accent.
+  Kept separate from AnkiDroid's shared palette so these values can be
+  reused by the dedicated Pocket home-screen components.
+-->
+<resources>
+    <color name="anki_pocket_canvas">#101116</color>
+    <color name="anki_pocket_surface">#191B25</color>
+    <color name="anki_pocket_surface_raised">#222433</color>
+    <color name="anki_pocket_outline">#34364A</color>
+    <color name="anki_pocket_accent">#E45A5A</color>
+    <color name="anki_pocket_text_primary">#F4F2F8</color>
+    <color name="anki_pocket_text_secondary">#B4B2C2</color>
+    <color name="anki_pocket_japanese_glow">#C8C5F2</color>
+</resources>
