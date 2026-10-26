@@ -541,7 +541,7 @@ open class DeckPicker :
         val pocketJapaneseProverbs = resources.getStringArray(R.array.anki_pocket_proverbs_japanese)
         val pocketEnglishProverbs = resources.getStringArray(R.array.anki_pocket_proverbs_english)
         if (pocketJapaneseProverbs.isNotEmpty() && pocketJapaneseProverbs.size == pocketEnglishProverbs.size) {
-            val dayNumber = java.time.LocalDate.now().toEpochDay()
+            val dayNumber = System.currentTimeMillis() / 86_400_000L
             val proverbIndex = Math.floorMod(dayNumber, pocketJapaneseProverbs.size.toLong()).toInt()
             findViewById<TextView>(R.id.anki_pocket_proverb_japanese)?.text = pocketJapaneseProverbs[proverbIndex]
             findViewById<TextView>(R.id.anki_pocket_proverb_english)?.text = pocketEnglishProverbs[proverbIndex]
