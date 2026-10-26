@@ -29,11 +29,12 @@ jobs:
 
       - name: Install required Android SDK packages
         run: |
-          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses
-          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --channel=3 \
-            "platform-tools" \
-            "platforms;android-37" \
-            "build-tools;36.0.0"
+          SDKMANAGER="$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager"
+          yes | "$SDKMANAGER" --licenses
+          "$SDKMANAGER" --update
+          echo "Available Android platform packages:"
+          "$SDKMANAGER" --list --channel=3 | grep -E "platforms;android-[0-9]+" | head -40 || true
+          "$SDKMANAGER" --channel=3 "platform-tools" "build-tools;36.0.0" "platforms;android-37"
 
       - name: Grant execute permission for Gradle wrapper
         run: chmod +x gradlew
