@@ -294,8 +294,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:paddingTop="20dp"
-                android:paddingBottom="10dp">
+                android:paddingTop="18dp"
+                android:paddingBottom="8dp">
 
                 <TextView
                     android:layout_width="0dp"
@@ -309,17 +309,20 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="NEW   ·   LEARN   ·   REVIEW"
-                    android:textColor="@color/anki_pocket_text_secondary"
-                    android:textSize="10sp"
-                    android:letterSpacing="0.05" />
+                    android:text="View all  →"
+                    android:textColor="@color/anki_pocket_japanese_glow"
+                    android:textSize="12sp"
+                    android:fontFamily="sans-serif-medium" />
             </LinearLayout>
 
             <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
                 android:id="@+id/pull_to_sync_wrapper"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:background="@drawable/anki_pocket_card_background"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
 
                 <FrameLayout
                     android:layout_width="match_parent"
@@ -343,9 +346,9 @@
                                 android:drawSelectorOnTop="true"
                                 android:fastScrollEnabled="true"
                                 android:focusable="true"
-                                android:paddingStart="4dp"
-                                android:paddingEnd="4dp"
-                                android:paddingTop="2dp"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="8dp"
+                                android:paddingTop="4dp"
                                 android:paddingBottom="72dp"
                                 android:scrollbars="vertical" />
                         </com.ichi2.anki.ui.BottomFadeFrameLayout>
@@ -396,8 +399,8 @@
             <LinearLayout
                 android:id="@+id/anki_pocket_scene_gallery"
                 android:layout_width="match_parent"
-                android:layout_height="112dp"
-                android:layout_marginTop="10dp"
+                android:layout_height="106dp"
+                android:layout_marginTop="12dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -515,7 +518,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="YOUR NEXT STEP"
+                    android:text="QUICK ACTIONS"
                     android:textColor="@color/anki_pocket_text_secondary"
                     android:textSize="10sp"
                     android:letterSpacing="0.12"
@@ -550,7 +553,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="A LITTLE ENCOURAGEMENT"
+                    android:text="YOUR POCKET SPACE"
                     android:textColor="@color/anki_pocket_text_secondary"
                     android:textSize="10sp"
                     android:letterSpacing="0.10"
