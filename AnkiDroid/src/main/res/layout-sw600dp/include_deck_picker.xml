@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/anki_pocket_canvas">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:id="@+id/deckpicker_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <!-- Persistent left rail -->
+        <LinearLayout
+            android:id="@+id/anki_pocket_sidebar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.82"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/anki_pocket_card_background"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:background="@drawable/anki_pocket_mark_background"
+                android:gravity="center"
+                android:text="★"
+                android:textColor="@color/anki_pocket_canvas"
+                android:textSize="24sp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Anki Pocket"
+                android:textColor="@color/anki_pocket_text_primary"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="日本語の旅"
+                android:textColor="@color/anki_pocket_japanese_glow"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="14dp"
+                android:background="@color/anki_pocket_outline" />
+
+            <TextView style="@style/AnkiPocketRailItem" android:text="⌂   Home" android:textColor="@color/anki_pocket_japanese_glow" />
+            <TextView style="@style/AnkiPocketRailItem" android:text="▤   Decks" />
+            <TextView style="@style/AnkiPocketRailItem" android:text="⌕   Browse" />
+            <TextView style="@style/AnkiPocketRailItem" android:text="▥   Statistics" />
+            <TextView style="@style/AnkiPocketRailItem" android:text="◉   Profile" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/anki_pocket_outline" />
+
+            <TextView style="@style/AnkiPocketRailItem" android:text="⚙   Settings" />
+            <TextView style="@style/AnkiPocketRailItem" android:text="?   Help" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="七転び八起き"
+                android:textColor="@color/anki_pocket_japanese_glow"
+                android:textSize="17sp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Fall seven times, stand up eight."
+                android:textColor="@color/anki_pocket_text_secondary"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Main content: hero, summaries, and the real Anki deck list -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.55"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/anki_pocket_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/anki_pocket_card_background"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MONDAY · YOUR STUDY SPACE"
+                    android:textColor="@color/anki_pocket_text_secondary"
+                    android:textSize="10sp"
+                    android:letterSpacing="0.12"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:text="こんにちは、学習者さん"
+                    android:textColor="@color/anki_pocket_japanese_glow"
+                    android:textSize="25sp"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="A little progress, every day."
+                    android:textColor="@color/anki_pocket_text_primary"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    android:background="@drawable/anki_pocket_card_background"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TODAY"
+                        android:textColor="@color/anki_pocket_text_secondary"
+                        android:textSize="10sp"
+                        android:letterSpacing="0.12" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:text="Your daily learning"
+                        android:textColor="@color/anki_pocket_text_primary"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-medium" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="New · Learn · Review"
+                        android:textColor="@color/anki_pocket_text_secondary"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    android:background="@drawable/anki_pocket_card_background"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="UP NEXT"
+                        android:textColor="@color/anki_pocket_text_secondary"
+                        android:textSize="10sp"
+                        android:letterSpacing="0.12" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:text="Ready when you are"
+                        android:textColor="@color/anki_pocket_text_primary"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-medium" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Your due cards appear in the deck list."
+                        android:textColor="@color/anki_pocket_text_secondary"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/anki_pocket_decks_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="18dp"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Your Decks"
+                    android:textColor="@color/anki_pocket_text_primary"
+                    android:textSize="19sp"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NEW   LEARN   REVIEW"
+                    android:textColor="@color/anki_pocket_text_secondary"
+                    android:textSize="10sp"
+                    android:letterSpacing="0.05" />
+            </LinearLayout>
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/pull_to_sync_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:id="@+id/deck_picker_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.ichi2.anki.ui.BottomFadeFrameLayout
+                            android:id="@+id/decks_fade_wrapper"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/decks"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:clipToPadding="false"
+                                android:drawSelectorOnTop="true"
+                                android:fastScrollEnabled="true"
+                                android:focusable="true"
+                                android:paddingStart="4dp"
+                                android:paddingEnd="4dp"
+                                android:paddingTop="2dp"
+                                android:paddingBottom="72dp"
+                                android:scrollbars="vertical" />
+                        </com.ichi2.anki.ui.BottomFadeFrameLayout>
+
+                        <com.ichi2.ui.FixedTextView
+                            android:id="@+id/review_summary_text_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="4dp"
+                            android:gravity="center" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/no_decks_placeholder"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:layout_gravity="center_horizontal"
+                            app:srcCompat="@drawable/anki_box" />
+                        <com.ichi2.ui.FixedTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center"
+                            android:text="@string/no_cards_placeholder_title"
+                            style="@style/TextAppearance.AppCompat.Medium" />
+                        <com.ichi2.ui.FixedTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:text="@string/no_cards_placeholder_description"
+                            style="@style/TextAppearance.AppCompat.Body1" />
+                    </LinearLayout>
+                </FrameLayout>
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        </LinearLayout>
+
+        <!-- Right utility rail -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.05"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/anki_pocket_card_background"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="QUICK ACTIONS"
+                    android:textColor="@color/anki_pocket_text_secondary"
+                    android:textSize="10sp"
+                    android:letterSpacing="0.12"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="Study Now  →"
+                    android:textColor="@color/anki_pocket_text_primary"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Pick up where you left off."
+                    android:textColor="@color/anki_pocket_text_secondary"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/anki_pocket_card_background"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A MOMENT OF CALM"
+                    android:textColor="@color/anki_pocket_text_secondary"
+                    android:textSize="10sp"
+                    android:letterSpacing="0.10"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="小さな一歩"
+                    android:textColor="@color/anki_pocket_japanese_glow"
+                    android:textSize="25sp"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="One small step."
+                    android:textColor="@color/anki_pocket_text_primary"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Keep going at your own pace. Every card is progress."
+                    android:textColor="@color/anki_pocket_text_secondary"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/anki_pocket_card_background"
+                android:gravity="center"
+                android:padding="14dp"
+                android:text="Your learning, your pace."
+                android:textColor="@color/anki_pocket_text_secondary"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/include_anki_progress" />
+    <include
+        android:id="@+id/floating_action_button"
+        layout="@layout/include_floating_add_button" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
