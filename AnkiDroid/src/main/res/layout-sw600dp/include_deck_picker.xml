@@ -132,7 +132,7 @@
                 android:layout_height="wrap_content"
                 android:paddingTop="11dp"
                 android:paddingBottom="11dp"
-                android:text="?   Help"
+                android:text="Help  ·"
                 android:textColor="@color/anki_pocket_text_primary"
                 android:textSize="14sp"
                 android:fontFamily="sans-serif-medium" />
