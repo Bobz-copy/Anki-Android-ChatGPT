@@ -65,11 +65,51 @@
                 android:layout_marginBottom="14dp"
                 android:background="@color/anki_pocket_outline" />
 
-            <TextView style="@style/AnkiPocketRailItem" android:text="⌂   Home" android:textColor="@color/anki_pocket_japanese_glow" />
-            <TextView style="@style/AnkiPocketRailItem" android:text="▤   Decks" />
-            <TextView style="@style/AnkiPocketRailItem" android:text="⌕   Browse" />
-            <TextView style="@style/AnkiPocketRailItem" android:text="▥   Statistics" />
-            <TextView style="@style/AnkiPocketRailItem" android:text="◉   Profile" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="11dp"
+                android:paddingBottom="11dp"
+                android:text="⌂   Home"
+                android:textColor="@color/anki_pocket_japanese_glow"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-medium" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="11dp"
+                android:paddingBottom="11dp"
+                android:text="▤   Decks"
+                android:textColor="@color/anki_pocket_text_primary"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-medium" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="11dp"
+                android:paddingBottom="11dp"
+                android:text="⌕   Browse"
+                android:textColor="@color/anki_pocket_text_primary"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-medium" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="11dp"
+                android:paddingBottom="11dp"
+                android:text="▥   Statistics"
+                android:textColor="@color/anki_pocket_text_primary"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-medium" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="11dp"
+                android:paddingBottom="11dp"
+                android:text="◉   Profile"
+                android:textColor="@color/anki_pocket_text_primary"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-medium" />
 
             <View
                 android:layout_width="match_parent"
@@ -78,8 +118,24 @@
                 android:layout_marginBottom="12dp"
                 android:background="@color/anki_pocket_outline" />
 
-            <TextView style="@style/AnkiPocketRailItem" android:text="⚙   Settings" />
-            <TextView style="@style/AnkiPocketRailItem" android:text="?   Help" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="11dp"
+                android:paddingBottom="11dp"
+                android:text="⚙   Settings"
+                android:textColor="@color/anki_pocket_text_primary"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-medium" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="11dp"
+                android:paddingBottom="11dp"
+                android:text="?   Help"
+                android:textColor="@color/anki_pocket_text_primary"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-medium" />
 
             <Space
                 android:layout_width="match_parent"
