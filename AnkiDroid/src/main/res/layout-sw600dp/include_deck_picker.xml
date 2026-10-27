@@ -392,6 +392,82 @@
                     </LinearLayout>
                 </FrameLayout>
             </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            <LinearLayout
+                android:id="@+id/anki_pocket_scene_gallery"
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Time of day scenes"
+                    android:textColor="@color/anki_pocket_text_primary"
+                    android:textSize="15sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingBottom="7dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/anki_pocket_hero_background"
+                        android:gravity="bottom|start"
+                        android:padding="9dp"
+                        android:text="☀  Dawn"
+                        android:textColor="@color/anki_pocket_text_primary"
+                        android:textSize="12sp"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/anki_pocket_card_background"
+                        android:gravity="bottom|start"
+                        android:padding="9dp"
+                        android:text="◉  Day"
+                        android:textColor="@color/anki_pocket_text_primary"
+                        android:textSize="12sp"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/anki_pocket_card_background"
+                        android:gravity="bottom|start"
+                        android:padding="9dp"
+                        android:text="◒  Dusk"
+                        android:textColor="@color/anki_pocket_text_primary"
+                        android:textSize="12sp"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/anki_pocket_card_background"
+                        android:gravity="bottom|start"
+                        android:padding="9dp"
+                        android:text="☾  Night"
+                        android:textColor="@color/anki_pocket_text_primary"
+                        android:textSize="12sp"
+                        android:fontFamily="sans-serif-medium" />
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
 
         <!-- Right utility rail -->
@@ -401,6 +477,33 @@
             android:layout_weight="1.05"
             android:layout_marginStart="12dp"
             android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:gravity="end|center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/anki_pocket_card_background"
+                    android:gravity="center"
+                    android:text="☼"
+                    android:textColor="@color/anki_pocket_japanese_glow"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/anki_pocket_mark_background"
+                    android:gravity="center"
+                    android:text="☺"
+                    android:textColor="@color/anki_pocket_canvas"
+                    android:textSize="20sp" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
