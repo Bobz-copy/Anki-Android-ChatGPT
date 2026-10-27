@@ -172,52 +172,17 @@
             <FrameLayout
                 android:id="@+id/anki_pocket_header"
                 android:layout_width="match_parent"
-                android:layout_height="224dp"
-                android:background="@drawable/anki_pocket_hero_background">
+                android:layout_height="190dp"
+                android:background="@drawable/anki_pocket_placeholder_background">
 
-                <ImageView
-                    android:layout_width="240dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="end|center_vertical"
-                    android:alpha="0.92"
-                    android:contentDescription="@null"
-                    android:scaleType="fitEnd"
-                    app:srcCompat="@drawable/anki_pocket_hero_landscape" />
-
-                <LinearLayout
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center_vertical"
-                    android:paddingStart="22dp"
-                    android:paddingEnd="18dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="YOUR STUDY SPACE  ·  日本語"
-                        android:textColor="@color/anki_pocket_text_secondary"
-                        android:textSize="11sp"
-                        android:letterSpacing="0.08"
-                        android:fontFamily="sans-serif-medium" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="9dp"
-                        android:text="こんにちは。"
-                        android:textColor="@color/anki_pocket_japanese_glow"
-                        android:textSize="30sp"
-                        android:fontFamily="sans-serif" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="Every card brings you a little further."
-                        android:textColor="@color/anki_pocket_text_primary"
-                        android:textSize="14sp" />
-                </LinearLayout>
+                    android:gravity="center"
+                    android:text="Picture not yet added"
+                    android:textColor="#B8BEC9"
+                    android:textSize="15sp"
+                    android:fontFamily="sans-serif" />
             </FrameLayout>
 
             <LinearLayout
@@ -228,7 +193,7 @@
 
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="72dp"
+                    android:layout_height="92dp"
                     android:layout_weight="1"
                     android:layout_marginEnd="6dp"
                     android:background="@drawable/anki_pocket_card_background"
@@ -253,7 +218,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:text="0 new   ·   0 review"
+                        android:text="New cards and reviews"
                         android:textColor="@color/anki_pocket_text_secondary"
                         android:textSize="12sp" />
                 </LinearLayout>
@@ -285,7 +250,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:text="0 cards waiting"
+                        android:text="Cards due for review"
                         android:textColor="@color/anki_pocket_text_secondary"
                         android:textSize="12sp" />
                 </LinearLayout>
@@ -317,7 +282,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Your decks"
+                    android:text="Your Decks"
                     android:textColor="@color/anki_pocket_text_primary"
                     android:textSize="19sp"
                     android:fontFamily="sans-serif-medium" />
